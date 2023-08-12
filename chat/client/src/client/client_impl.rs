@@ -86,7 +86,6 @@ impl ClientImpl {
                 println!("unhandled message code: \"{}\"", code);  
             },
         }
-        // println!("Client received {} from {}", msg, stream.addr.to_string());
     }
     
     fn on_disconnect(&self, client_state: &ClientState, stream: &ClientStream) {

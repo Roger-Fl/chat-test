@@ -26,11 +26,6 @@ impl ServerImpl {
     
     fn on_connect(&self, server_state: &ServerState, stream: &ClientStream) {
         println!("Client {} connected to the server", stream.addr);
-        // let msg = messages::MsgOnConnect {
-        //     user: "Test",
-        // };
-        // let msg_encoded = message_stream::serialize_data(messages::Message::OnConnect as u32, &msg).expect("Failed to serialze message");
-        // server_state.send_all_except_s(msg_encoded.as_slice(), stream.addr).expect("failed to send message");
     }
     
     fn on_disconnect(&self, server_state: &ServerState, stream: &ClientStream) {
